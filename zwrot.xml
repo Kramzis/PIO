@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<formularz>
+<daneOsobowe>
+	<osoba dane = "dane osobowe">
+		<imieNazwisko>Jan Kowalski</imieNazwisko>
+		<adres>Lipowa 12</adres>
+		<email>jan.kowalski@onet.pl</email>
+		<telefonKontakt>123456789</telefonKontakt>
+	</osoba>
+</daneOsobowe>
+
+<daneTowaru>
+	<zwrotT dane = "dane o zwracanym towarze">
+		<nrDokumentuZakupu>123456789</nrDokumentuZakupu>
+		<szczegolyT>
+		<nazwaT>poduszka</nazwaT>
+		<ilosc>1</ilosc>
+		<cena>25 zł</cena>
+		</szczegolyT>
+		<powodyZwrotu>1</powodyZwrotu>
+		<wartoscT>25 zł</wartoscT>
+		<dataZakupu>20.03.2022</dataZakupu>
+		<podpis>Kowalski</podpis>
+	</zwrotT>
+</daneTowaru>
+
+<daneDoZwrotuSr>
+	<rachunek dane = "dane do zwrotu">
+		<nrRachunku>12345678901234567890123456</nrRachunku>
+		<imieNazwisko>Jan Kowalski></imieNazwisko>
+		<adres>Lipowa 12</adres>
+		<data>25.03.2022</data>
+		<podpis>Kowalski</podpis>
+	</rachunek>
+</daneDoZwrotuSr>
+</formularz>

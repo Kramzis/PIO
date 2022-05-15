@@ -1,0 +1,85 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="formularz">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="daneOsobowe">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="osoba">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="imieNazwisko"/>
+                    <xs:element type="xs:string" name="adres"/>
+                    <xs:element type="xs:string" name="email"/>
+                    <xs:element type="xs:int" name="telefonKontakt"/>
+						<xsd: restriction base="xsd:integer">
+						<xsd:totalDigits value="9">
+						</xsd:restriction>
+                  </xs:sequence>
+                  <xs:attribute type="xs:date" name="dane"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="daneTowaru">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="zwrotT">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="nrDokumentuZakupu"/>
+                    <xs:element name="szczegolyT">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="nazwaT"/>
+                          <xs:element name="ilosc" maxOccurs="100"
+													minOccurs ="1"/>
+                          <xs:element type="xs:integer" name="cena"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:integer" name="powodyZwrotu"/>
+						<xsd:complexType value="xsd:integer">
+							<xsd:choice value="1"/>
+							<xsd:choice value="2"/>
+							<xsd:choice value="3"/>
+							<xsd:choice value="4"/>
+							<xsd:choice value="5"/>
+							<xsd:choice value="6"/>
+						</xsd:complexType>
+                    <xs:element type="xs:string" name="wartoscT"/>
+                    <xs:element type="xs:string" name="dataZakupu"/>
+                    <xs:element type="xs:string" name="podpis"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="dane"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="daneDoZwrotuSr">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rachunek">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="nrRachunku"/>
+						<xsd: restriction base="xsd:integer">
+						<xsd:totalDigits value="26">
+						</xsd:restriction>
+                    <xs:element type="xs:string" name="imieNazwisko"/>
+                    <xs:element type="xs:string" name="adres"/>
+                    <xs:element type="xs:date" name="data"/>
+                    <xs:element type="xs:string" name="podpis"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="dane"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

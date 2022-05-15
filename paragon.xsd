@@ -1,0 +1,56 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="paragon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sprzedawca">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nazwaRestauracji"/>
+              <xs:element type="xs:string" name="adres"/>
+              <xs:element type="xs:integer" name="telefon"/>
+				  <xs:restriction base="xsd:integer">
+					<xs:totalDigits value="9"/>
+				  </xs:restriction>
+              <xs:element type="xs:int" name="nip"/>
+              <xs:element type="xs:short" name="numerParagonu"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="szczegółyZamówienia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="nazwa"/>
+              <xs:element type="integer"  name="ilosc" maxOccurs="10"/>  
+              <xs:element type="xs:string" name="cena"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="podatki">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="stawkaPodatku"/>
+              <xs:element type="xs:string" name="PTU"/>
+              <xs:element type="xs:string" name="sumaPTU"/>
+              <xs:element type="xs:string" name="sumaPLN"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="platnosc">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="sposóbPłatności"/>
+              <xs:element type="xs:byte" name="numerPłatności"/>
+              <xs:element type="xs:string" name="numerKasy"/>
+              <xs:element type="xs:string" name="stanowisko"/>
+              <xs:element type="xs:string" name="data"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,32 @@
+
+
+<paragon>
+    <sprzedawca id = "sprzedawca">
+        <nazwaRestauracji>Sushi Bar</nazwaRestauracji>
+        <adres>ul. Nadbystrzycka 1, 20-618 Lublin</adres>
+        <telefon>123456789</telefon>
+        <nip>0987654321</nip>
+        <numerParagonu>12345</numerParagonu>
+    </sprzedawca>
+    <szczegółyZamówienia id="sZamowienia">
+        <nazwa>Sushi Box</nazwa>
+        <ilosc>1 </ilosc>
+        <cena>31 zł</cena>
+        
+    </szczegółyZamówienia>
+    <podatki id ="podt">
+        <stawkaPodatku>23%</stawkaPodatku>
+        <PTU>6 zł</PTU>
+        <sumaPTU>6 zł</sumaPTU>
+        <sumaPLN>31 zł</sumaPLN>
+    </podatki>
+    <platnosc id="platn">
+        <sposóbPłatności>BLIK</sposóbPłatności>
+        <numerPłatności>00098</numerPłatności>
+        <numerKasy>#00000001</numerKasy>
+        <stanowisko>Kasjer</stanowisko>
+        <data>2022-03-27 20:01</data>
+    </platnosc>
+</paragon>
+
+
